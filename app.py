@@ -5,7 +5,7 @@ app = Flask(__name__)
 model = pickle.load(open('model.pickle', 'rb'))
 
 
-@app.route('/)
+@app.route('/')
 def index():
     return render_template('index.html')
 
