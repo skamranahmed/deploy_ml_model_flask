@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profit Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="login-box">
+	<h2 class="first">Profit Prediction</h2>
+
+	<form action="{{ url_for('predict') }}" method="post">
+		<div class="user-box">
+			<input type="text" name="R&D Spend" required="required">
+			<label>Research and Development Cost</label>
+		</div>
+		<div class="user-box">
+			<input type="text"  name="Administration" required="required">
+			<label for="">Administration Cost</label>
+		</div>
+		<div class="user-box">
+			<input type="text" name="Marketing Spend" required="required">
+			<label for="">Marketing Cost</label>
+		</div>
+		<button>
+		    <span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		    Predict
+		</button>
+	</form>
+	
+	<h2 class="predicted">{{ predicted_value }}</h2>
+
+</div>
+</body>
+</html>
